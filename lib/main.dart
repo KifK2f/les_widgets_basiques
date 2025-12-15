@@ -65,22 +65,30 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-
-        child: Icon(
-          // FontAwesomeIcons.apple,
-          // FontAwesomeIcons.android,
-          FontAwesomeIcons.houseMedical,
-          // Icons.adb,
-          color: Colors.deepPurple,
-          size: 128,
-          shadows: [
-            BoxShadow(
-              color: Colors.red.shade300,
-              blurRadius: 3,
-              offset: const Offset(4,4)
-            )
-          ],
+        child: Image.asset(
+          "assets/images/android_bot.jpg",
+          width: MediaQuery.of(context).size.width,
+          height: 200,
+          fit: BoxFit.contain,
+          alignment: Alignment.topLeft,
+          repeat: ImageRepeat.repeat,
+          // fit: BoxFit.fill,
         ),
+        // child: Icon(
+        //   // FontAwesomeIcons.apple,
+        //   // FontAwesomeIcons.android,
+        //   FontAwesomeIcons.houseMedical,
+        //   // Icons.adb,
+        //   color: Colors.deepPurple,
+        //   size: 128,
+        //   shadows: [
+        //     BoxShadow(
+        //       color: Colors.red.shade300,
+        //       blurRadius: 3,
+        //       offset: const Offset(4,4)
+        //     )
+        //   ],
+        // ),
 
 
         // child: RichText(text: TextSpan(
