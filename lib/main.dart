@@ -65,15 +65,31 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Image.asset(
-          "assets/images/android_bot.jpg",
-          width: MediaQuery.of(context).size.width,
-          height: 200,
-          fit: BoxFit.contain,
-          alignment: Alignment.topLeft,
-          repeat: ImageRepeat.repeat,
-          // fit: BoxFit.fill,
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [Colors.black, Colors.black26],
+            begin: Alignment.center,
+              end: Alignment.bottomCenter
+            )
+          ),
+          child: Image.network(
+            height: MediaQuery.of(context).size.height,
+            // height: 500,
+            "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png",
+            fit: BoxFit.contain,
+            alignment: Alignment.topLeft,
+          ),
         ),
+        // child: Image.asset(
+        //   "assets/images/android_bot.jpg",
+        //   width: MediaQuery.of(context).size.width,
+        //   height: 200,
+        //   fit: BoxFit.contain,
+        //   alignment: Alignment.topLeft,
+        //   repeat: ImageRepeat.repeat,
+        //   // fit: BoxFit.fill,
+        // ),
         // child: Icon(
         //   // FontAwesomeIcons.apple,
         //   // FontAwesomeIcons.android,
