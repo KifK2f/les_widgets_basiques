@@ -46,6 +46,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(title),
         leading: const Icon(Icons.home),
@@ -65,33 +66,52 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          padding: const EdgeInsets.all(24),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.black, Colors.black26],
-            begin: Alignment.center,
-              end: Alignment.bottomCenter
-            )
-          ),
-          child: CircleAvatar(
-            radius: 128,
-            backgroundColor: Colors.deepPurpleAccent,
-            backgroundImage: AssetImage(
-              "assets/images/android_bot.jpg",
-              // scale: 5
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Je suis dans une colonne'),
+            Image.network("https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png"),
+            const CircleAvatar(
+              radius: 64,
+              backgroundImage: AssetImage("assets/images/android_bot.jpg"),
             ),
-            child: Image.network("https://iconape.com/wp-content/png_logo_vector/flutter-logo.png"),
-          ),
-          // child: Image.network(
-          //   height: MediaQuery.of(context).size.height,
-          //   // height: 500,
-          //   "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png",
-          //   fit: BoxFit.contain,
-          //   alignment: Alignment.topLeft,
-          // ),
+            Container(
+              color: Colors.red,
+              height: 128,
+              width: MediaQuery.of(context).size.width * 0.7,
+              margin: const EdgeInsets.all(12),
+            )
+          ],
         ),
+        // child: Container(
+        //   height: MediaQuery.of(context).size.height,
+        //   width: MediaQuery.of(context).size.width,
+        //   padding: const EdgeInsets.all(24),
+        //   decoration: const BoxDecoration(
+        //     gradient: LinearGradient(colors: [Colors.black, Colors.black26],
+        //     begin: Alignment.center,
+        //       end: Alignment.bottomCenter
+        //     )
+        //   ),
+        //   child: CircleAvatar(
+        //     radius: 128,
+        //     backgroundColor: Colors.deepPurpleAccent,
+        //     backgroundImage: AssetImage(
+        //       "assets/images/android_bot.jpg",
+        //       // scale: 5
+        //     ),
+        //     child: Image.network("https://iconape.com/wp-content/png_logo_vector/flutter-logo.png"),
+        //   ),
+        //   // child: Image.network(
+        //   //   height: MediaQuery.of(context).size.height,
+        //   //   // height: 500,
+        //   //   "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png",
+        //   //   fit: BoxFit.contain,
+        //   //   alignment: Alignment.topLeft,
+        //   // ),
+        // ),
         // child: Image.asset(
         //   "assets/images/android_bot.jpg",
         //   width: MediaQuery.of(context).size.width,
