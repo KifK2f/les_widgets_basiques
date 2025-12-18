@@ -66,25 +66,45 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Je suis dans une colonne'),
-            Image.network("https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png"),
-            const CircleAvatar(
-              radius: 64,
-              backgroundImage: AssetImage("assets/images/android_bot.jpg"),
-            ),
-            Container(
-              color: Colors.red,
-              height: 128,
-              width: MediaQuery.of(context).size.width * 0.7,
-              margin: const EdgeInsets.all(12),
-            )
-          ],
-        ),
+
+        child: 
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 5),
+              child:  Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const CircleAvatar(
+                    radius: 34,
+                    backgroundImage: AssetImage("assets/images/android_bot.jpg"),
+                  ),
+                  Text('Je suis dans une Row',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const Icon(Icons.send, color: Colors.white)
+                ],
+              ),
+        )
+
+
+        // child: Column(
+        //   mainAxisSize: MainAxisSize.max,
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   crossAxisAlignment: CrossAxisAlignment.start,
+        //   children: [
+        //     const Text('Je suis dans une colonne'),
+        //     Image.network("https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png"),
+        //     const CircleAvatar(
+        //       radius: 64,
+        //       backgroundImage: AssetImage("assets/images/android_bot.jpg"),
+        //     ),
+        //     Container(
+        //       color: Colors.red,
+        //       height: 128,
+        //       width: MediaQuery.of(context).size.width * 0.7,
+        //       margin: const EdgeInsets.all(12),
+        //     )
+        //   ],
+        // ),
         // child: Container(
         //   height: MediaQuery.of(context).size.height,
         //   width: MediaQuery.of(context).size.width,
