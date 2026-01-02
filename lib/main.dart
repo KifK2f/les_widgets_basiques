@@ -66,24 +66,54 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-
-        child: 
-            Padding(padding: const EdgeInsets.symmetric(horizontal: 5),
-              child:  Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const CircleAvatar(
-                    radius: 34,
-                    backgroundImage: AssetImage("assets/images/android_bot.jpg"),
-                  ),
-                  Text('Je suis dans une Row',
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const Icon(Icons.send, color: Colors.white)
-                ],
+        child: Stack(
+          // alignment: Alignment.topLeft,
+          alignment: Alignment.center,
+          children: [
+            Image.asset(
+              "assets/images/sunset.jpg",
+              fit: BoxFit.cover,
+              // height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height,
+            ),
+            // Text(
+            //   "Apprendre la stack pour empiler les widgets entre elles",
+            //   style: TextStyle(
+            //       color: Colors.red
+            //   ),
+            // ),
+            Container(
+              margin: const EdgeInsets.all(18) ,
+              // alignment: Alignment.center,
+              height: 128,
+              width: MediaQuery.of(context).size.width * 0.8,
+              decoration: BoxDecoration(
+                  // color: Colors.white.withValues(alpha: 0.5),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16)
               ),
-        )
+            ),
+            const Text(
+                "Apprendre la stack pour empiler les widgets entre elles",
+                style: TextStyle(
+                  color: Colors.red
+                ),
+            ),
+
+          ],
+        ),
+        //
+        // child : Column(
+        //   mainAxisAlignment: MainAxisAlignment.start,
+        //   children: [
+        //     customRow(title: "Une journée chez android", asset: "assets/images/android_bot.jpg", context: context),
+        //     customRow(title: "Esacapade en bateau", asset: "assets/images/boat.jpg", context: context),
+        //     customRow(title: "Oh le chat", asset: "assets/images/cat.jpg", context: context),
+        //     customRow(title: "Le maitre de la savane", asset: "assets/images/elephant.jpg", context: context),
+        //     customRow(title: "Quel coucher de soleil", asset: "assets/images/sunset.jpg", context: context),
+        //     customRow(title: "En mode Kelly slater", asset: "assets/images/surf.jpg", context: context),
+        //   ],
+        // ),
 
 
         // child: Column(
@@ -305,6 +335,32 @@ class MyHomePage extends StatelessWidget {
       //   ]),
     );
   }
+
+  // Padding customRow({required String title, required String asset, required BuildContext context}){
+  //     return Padding(
+  //         padding: const EdgeInsets.symmetric(
+  //           horizontal: 5,
+  //           vertical: 3,
+  //         ),
+  //       child: Row(
+  //         mainAxisSize: MainAxisSize.max,
+  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //         children: [
+  //           CircleAvatar(
+  //             radius: 34,
+  //             backgroundImage: AssetImage(asset),
+  //           ),
+  //           Text(
+  //             title,
+  //             style: Theme.of(context).textTheme.titleLarge,
+  //           ),
+  //           const Icon(Icons.send, color: Colors.white)
+  //         ],
+  //       )
+  //     );
+
+  // }
+
 
 }
 
