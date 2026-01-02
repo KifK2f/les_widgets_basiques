@@ -65,43 +65,62 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: Center(
-        child: Stack(
-          // alignment: Alignment.topLeft,
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              "assets/images/sunset.jpg",
-              fit: BoxFit.cover,
-              // height: MediaQuery.of(context).size.height,
-              height: MediaQuery.of(context).size.height,
-            ),
-            // Text(
-            //   "Apprendre la stack pour empiler les widgets entre elles",
-            //   style: TextStyle(
-            //       color: Colors.red
-            //   ),
-            // ),
-            Container(
-              margin: const EdgeInsets.all(18) ,
-              // alignment: Alignment.center,
-              height: 128,
-              width: MediaQuery.of(context).size.width * 0.8,
-              decoration: BoxDecoration(
-                  // color: Colors.white.withValues(alpha: 0.5),
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16)
-              ),
-            ),
-            const Text(
-                "Apprendre la stack pour empiler les widgets entre elles",
-                style: TextStyle(
-                  color: Colors.red
-                ),
-            ),
-
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text("Salut les codeurs"),
+          const Spacer(
+            flex: 2,
+          ),
+          Container(
+            color: Colors.red,
+          height: 32,
+          ),
+          const Icon(
+            Icons.add_a_photo,
+            color: Colors.orange,
+          ),
+          const Spacer(
+            flex: 1,
+          ),
+        ],
+      // body: Center(
+        // child: Stack(
+        //   // alignment: Alignment.topLeft,
+        //   alignment: Alignment.center,
+        //   children: [
+        //     Image.asset(
+        //       "assets/images/sunset.jpg",
+        //       fit: BoxFit.cover,
+        //       // height: MediaQuery.of(context).size.height,
+        //       height: MediaQuery.of(context).size.height,
+        //     ),
+        //     // Text(
+        //     //   "Apprendre la stack pour empiler les widgets entre elles",
+        //     //   style: TextStyle(
+        //     //       color: Colors.red
+        //     //   ),
+        //     // ),
+        //     Container(
+        //       margin: const EdgeInsets.all(18) ,
+        //       // alignment: Alignment.center,
+        //       height: 128,
+        //       width: MediaQuery.of(context).size.width * 0.8,
+        //       decoration: BoxDecoration(
+        //           // color: Colors.white.withValues(alpha: 0.5),
+        //           color: Colors.white,
+        //           borderRadius: BorderRadius.circular(16)
+        //       ),
+        //     ),
+        //     const Text(
+        //         "Apprendre la stack pour empiler les widgets entre elles",
+        //         style: TextStyle(
+        //           color: Colors.red
+        //         ),
+        //     ),
+        //
+        //   ],
+        // ),
         //
         // child : Column(
         //   mainAxisAlignment: MainAxisAlignment.start,
