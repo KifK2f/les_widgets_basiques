@@ -68,56 +68,80 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("Salut les codeurs"),
-          const Divider(
-            height: 128,
-            thickness: 4, //Epaisseur
-            indent: 12, //Espacement au debut du trait
-            endIndent: 64, //Espacement à la fin du trait
-            color: Colors.deepPurpleAccent,
-          ),
-          const Row(
-            // children: [
-            //   const SizedBox(width: 12),
-            //   const Icon(
-            //     Icons.house,
-            //   ),
-            //   const Spacer(),
-            //   const Text("Dans une Row")
-            // ],
-            //Même chose que cesi en dessous
-            children: [
-               SizedBox(width: 12),
-               Icon(
-                Icons.house,
-              ),
-              SizedBox(
-                height: 45,
-                child:  VerticalDivider(
-                  color: Colors.amber,
-                  thickness: 1,
-                ),
-              ),
-               Spacer(),
-                const Text("Dans une Row"),
-              SizedBox(width: 8,)
-            ],
-          ),
-          const Spacer(
-            flex: 3,
-          ),
           Container(
-            color: Colors.red,
-          height: 32,
+            height: 64,
+            margin: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.lightGreenAccent
+            ),
           ),
-          const Icon(
-            Icons.add_a_photo,
-            color: Colors.orange,
-          ),
-          const Spacer(
-            flex: 1,
-          ),
+          Expanded(child: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(colors: [Colors.blue, Colors.lightGreen],
+              begin: Alignment.topCenter
+              ),
+            ),
+          ))
         ],
+        // children: [
+        //   Text("Salut les codeurs"),
+        //   const Divider(
+        //     height: 128,
+        //     thickness: 4, //Epaisseur
+        //     indent: 12, //Espacement au debut du trait
+        //     endIndent: 64, //Espacement à la fin du trait
+        //     color: Colors.deepPurpleAccent,
+        //   ),
+        //   const Row(
+        //     // children: [
+        //     //   const SizedBox(width: 12),
+        //     //   const Icon(
+        //     //     Icons.house,
+        //     //   ),
+        //     //   const Spacer(),
+        //     //   const Text("Dans une Row")
+        //     // ],
+        //     //Même chose que cesi en dessous
+        //     children: [
+        //        SizedBox(width: 12),
+        //        Icon(
+        //         Icons.house,
+        //       ),
+        //       SizedBox(
+        //         height: 45,
+        //         child:  VerticalDivider(
+        //           color: Colors.amber,
+        //           thickness: 1,
+        //         ),
+        //       ),
+        //        Spacer(),
+        //         const Text("Dans une Row"),
+        //       SizedBox(width: 8,)
+        //     ],
+        //   ),
+        //   const Spacer(),
+        //   Row(
+        //     children: [
+        //       Container(color: Colors.white, height: 45, width: 128,),
+        //       Expanded(child: Container(color: Colors.greenAccent, height: 45 ,)), //Prendre l'espace disponible restant
+        //     ],
+        //   ),
+        //   const Spacer(
+        //     flex: 3,
+        //   ),
+        //   Container(
+        //     color: Colors.red,
+        //   height: 32,
+        //   ),
+        //   const Icon(
+        //     Icons.add_a_photo,
+        //     color: Colors.orange,
+        //   ),
+        //   const Spacer(
+        //     flex: 1,
+        //   ),
+        // ],
       // body: Center(
         // child: Stack(
         //   // alignment: Alignment.topLeft,
