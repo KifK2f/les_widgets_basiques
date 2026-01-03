@@ -69,8 +69,42 @@ class MyHomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text("Salut les codeurs"),
+          const Divider(
+            height: 128,
+            thickness: 4, //Epaisseur
+            indent: 12, //Espacement au debut du trait
+            endIndent: 64, //Espacement à la fin du trait
+            color: Colors.deepPurpleAccent,
+          ),
+          const Row(
+            // children: [
+            //   const SizedBox(width: 12),
+            //   const Icon(
+            //     Icons.house,
+            //   ),
+            //   const Spacer(),
+            //   const Text("Dans une Row")
+            // ],
+            //Même chose que cesi en dessous
+            children: [
+               SizedBox(width: 12),
+               Icon(
+                Icons.house,
+              ),
+              SizedBox(
+                height: 45,
+                child:  VerticalDivider(
+                  color: Colors.amber,
+                  thickness: 1,
+                ),
+              ),
+               Spacer(),
+                const Text("Dans une Row"),
+              SizedBox(width: 8,)
+            ],
+          ),
           const Spacer(
-            flex: 2,
+            flex: 3,
           ),
           Container(
             color: Colors.red,
