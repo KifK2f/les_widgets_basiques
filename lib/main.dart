@@ -47,39 +47,44 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(
-        title: Text(title),
-        leading: const Icon(Icons.home),
-        // backgroundColor: Theme.of(context).colorScheme.onInverseSurface,
-
-        // Les actions sont des listes de Widgets
-        actions: const [
-          Icon(Icons.person),
-          Icon(Icons.access_time),
-        ],
-        bottom: PreferredSize( 
-          preferredSize: Size.fromHeight(24), //Taille par rapport à la hauteur
-          child: Text("Salut les codeurs"),
-        ),
-        // backgroundColor: Colors.blue,
-        elevation: 8,
-        centerTitle: true,
-      ),
-      body: Column(
+      // appBar: AppBar(
+      //   title: Text(title),
+      //   leading: const Icon(Icons.home),
+      //   // backgroundColor: Theme.of(context).colorScheme.onInverseSurface,
+      //
+      //   // Les actions sont des listes de Widgets
+      //   actions: const [
+      //     Icon(Icons.person),
+      //     Icon(Icons.access_time),
+      //   ],
+      //   bottom: PreferredSize(
+      //     preferredSize: Size.fromHeight(24), //Taille par rapport à la hauteur
+      //     child: Text("Salut les codeurs"),
+      //   ),
+      //   // backgroundColor: Colors.blue,
+      //   elevation: 8,
+      //   centerTitle: true,
+      // ),
+      body: SafeArea(
+        // bottom: false, //Masquer le bas
+        // top: false,
+        child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
+            alignment: Alignment.center,
             height: 64,
-            margin: const EdgeInsets.all(16),
+            // margin: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: Colors.lightGreenAccent
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.lightGreenAccent
             ),
+            child: const Text("Avons nous un problème de lecture ?"),
           ),
           Expanded(child: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [Colors.blue, Colors.lightGreen],
-              begin: Alignment.topCenter
+                  begin: Alignment.topCenter
               ),
             ),
           ))
@@ -142,7 +147,7 @@ class MyHomePage extends StatelessWidget {
         //     flex: 1,
         //   ),
         // ],
-      // body: Center(
+        // body: Center(
         // child: Stack(
         //   // alignment: Alignment.topLeft,
         //   alignment: Alignment.center,
@@ -349,34 +354,35 @@ class MyHomePage extends StatelessWidget {
         //   ),
 
 
-          // decoration:  BoxDecoration(
-          //   color: Colors.red,
-          //   // shape: BoxShape.circle,
-          //   borderRadius: BorderRadius.circular(56),
-          //   boxShadow: const [
-          //     BoxShadow(
-          //       color: Colors.black54,
-          //       blurRadius: 4,
-          //       offset: Offset(2, 2)
-          //     )
-          //   ],
-          //   // border: Border.all(
-          //   //   color: Colors.blue,
-          //   //   width: 3,
-          //   //   style: BorderStyle.solid,
-          //   // )
-          //   gradient: const LinearGradient(
-          //     // colors: [Colors.red, Colors.blue, Colors.yellow],
-          //     colors: [Colors.black, Colors.black38],
-          //   begin: Alignment.topRight,
-          //     end: Alignment.bottomLeft,
-          //     // begin: Alignment.topCenter,
-          //     // end: Alignment.bottomCenter,
-          //     // stops: [0, 0.5, 1]
-          //     stops: [0, 0.7],
-          //   )
-          // ),
-        ),
+        // decoration:  BoxDecoration(
+        //   color: Colors.red,
+        //   // shape: BoxShape.circle,
+        //   borderRadius: BorderRadius.circular(56),
+        //   boxShadow: const [
+        //     BoxShadow(
+        //       color: Colors.black54,
+        //       blurRadius: 4,
+        //       offset: Offset(2, 2)
+        //     )
+        //   ],
+        //   // border: Border.all(
+        //   //   color: Colors.blue,
+        //   //   width: 3,
+        //   //   style: BorderStyle.solid,
+        //   // )
+        //   gradient: const LinearGradient(
+        //     // colors: [Colors.red, Colors.blue, Colors.yellow],
+        //     colors: [Colors.black, Colors.black38],
+        //   begin: Alignment.topRight,
+        //     end: Alignment.bottomLeft,
+        //     // begin: Alignment.topCenter,
+        //     // end: Alignment.bottomCenter,
+        //     // stops: [0, 0.5, 1]
+        //     stops: [0, 0.7],
+        //   )
+        // ),
+      ),
+      ),
         // widthFactor: 3,
         // heightFactor: 4,
         // child:  FlutterLogo(
