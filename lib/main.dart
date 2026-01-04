@@ -46,8 +46,58 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.blue,
-      appBar: AppBar(),
+      backgroundColor: Colors.lightBlueAccent,
+      body: Center(
+        child: Card(
+          clipBehavior: Clip.antiAlias, // Je ne veux pas que l'image dépasse la zone que le lui est prédéfini
+          elevation: 8,
+          margin: const EdgeInsets.all(16),
+          color: Colors.lightGreenAccent.shade200,
+          // child: Container(
+            // padding: const EdgeInsets.all(8),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Mon identité",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const Divider(
+                  thickness: 2,
+                  indent: 8,
+                  endIndent: 8,
+                  color: Colors.lightBlueAccent,
+                ),
+                const Row(
+                  children: [
+                      CircleAvatar(
+                        radius: 24,
+                        backgroundImage: AssetImage("assets/images/surf.jpg"),
+                      ),
+                    Spacer(),
+                    Text(
+                        "Friedo TheCodeHunter",
+                      style: TextStyle(
+                        color: Colors.lightBlue,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Image.asset("assets/images/android_bot.jpg")
+              ],
+            ),
+
+        ),
+
+      ),
+
+      // backgroundColor: Colors.blue,
+      // appBar: AppBar(),
       // appBar: AppBar(
       //   title: Text(title),
       //   leading: const Icon(Icons.home),
@@ -69,51 +119,51 @@ class MyHomePage extends StatelessWidget {
       // body: SafeArea( Eviter que si y'a pas de AppBar que l'on laiss un espace de sécurité
         // bottom: false, //Masquer le bas
         // top: false,
-      body: SingleChildScrollView( //Une vue déroulable qui ne contient qu'un seul enfant
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Padding(
-                padding: const EdgeInsets.all(8),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child:  Row(
-                    children:
-                    List.generate(15, (index) => CircleAvatar(
-                      backgroundColor: Colors.orangeAccent,
-                      child: Text(index.toString()),
-                    )),
-
-                  ),
-                )
-            ),
-
-            Container(
-              color: Colors.white,
-              height: 54,
-            ),
-            Container(
-              color: Colors.orange,
-              height: 254,
-            ),
-            Container(
-              color: Colors.lightGreen,
-              height: 454,
-            ),
-            Container(
-              color: Colors.red,
-              height: 128,
-            ),
-            Container(
-              color: Colors.brown,
-              height: 254,
-            ),
-            Container(
-              color: Colors.red,
-              height: 128,
-            ),
-          ],
-
+      // body: SingleChildScrollView( //Une vue déroulable qui ne contient qu'un seul enfant
+      //   scrollDirection: Axis.vertical,
+      //   child: Column(
+      //     children: [
+      //       Padding(
+      //           padding: const EdgeInsets.all(8),
+      //           child: SingleChildScrollView(
+      //             scrollDirection: Axis.horizontal,
+      //             child:  Row(
+      //               children:
+      //               List.generate(15, (index) => CircleAvatar(
+      //                 backgroundColor: Colors.orangeAccent,
+      //                 child: Text(index.toString()),
+      //               )),
+      //
+      //             ),
+      //           )
+      //       ),
+      //
+      //       Container(
+      //         color: Colors.white,
+      //         height: 54,
+      //       ),
+      //       Container(
+      //         color: Colors.orange,
+      //         height: 254,
+      //       ),
+      //       Container(
+      //         color: Colors.lightGreen,
+      //         height: 454,
+      //       ),
+      //       Container(
+      //         color: Colors.red,
+      //         height: 128,
+      //       ),
+      //       Container(
+      //         color: Colors.brown,
+      //         height: 254,
+      //       ),
+      //       Container(
+      //         color: Colors.red,
+      //         height: 128,
+      //       ),
+      //     ],
+      //
 
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         // children: [
@@ -471,8 +521,8 @@ class MyHomePage extends StatelessWidget {
         //     stops: [0, 0.7],
         //   )
         // ),
-      ),
-      ),
+      // ),
+      // ),
         // widthFactor: 3,
         // heightFactor: 4,
         // child:  FlutterLogo(
