@@ -82,10 +82,54 @@ class MyHomePage extends StatelessWidget {
             child: const Text("Avons nous un problème de lecture ?"),
           ),
           Expanded(child: Container(
+            // margin: EdgeInsets.fromLTRB(5, 0, 10, 0),
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [Colors.blue, Colors.lightGreen],
                   begin: Alignment.topCenter
               ),
+            ),
+            child: Wrap(
+              direction: Axis.horizontal,
+              // crossAxisAlignment: WrapCrossAlignment.end,
+              alignment: WrapAlignment.start,
+              children: [
+                Container(
+                  color: Colors.green,
+                  height: 54,
+                  width: 128,
+                ),
+                Container(
+                  color: Colors.redAccent,
+                  height: 54,
+                  width: 228,
+                ),
+                Container(
+                  color: Colors.orange,
+                  height: 54,
+                  width: 100,
+                ),
+                Container(
+                  color: Colors.black54,
+                  height: 54,
+                  width: 128,
+                ),
+                Container(
+                  color: Colors.pinkAccent,
+                  height: 54,
+                  width: 128,
+                ),
+                Container(
+                  color: Colors.white,
+                  height: 54,
+                  width: 56,
+                ),
+                Expanded(
+                  child: Container(
+                  color: Colors.lime,
+                  height: 54,
+                  // width: 56,
+                ),),
+              ],
             ),
           ))
         ],
