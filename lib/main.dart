@@ -47,6 +47,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.blue,
+      appBar: AppBar(),
       // appBar: AppBar(
       //   title: Text(title),
       //   leading: const Icon(Icons.home),
@@ -65,74 +66,119 @@ class MyHomePage extends StatelessWidget {
       //   elevation: 8,
       //   centerTitle: true,
       // ),
-      body: SafeArea(
+      // body: SafeArea( Eviter que si y'a pas de AppBar que l'on laiss un espace de sécurité
         // bottom: false, //Masquer le bas
         // top: false,
+      body: SingleChildScrollView( //Une vue déroulable qui ne contient qu'un seul enfant
+        scrollDirection: Axis.vertical,
         child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            alignment: Alignment.center,
-            height: 64,
-            // margin: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.lightGreenAccent
+          children: [
+            Padding(
+                padding: const EdgeInsets.all(8),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child:  Row(
+                    children:
+                    List.generate(15, (index) => CircleAvatar(
+                      backgroundColor: Colors.orangeAccent,
+                      child: Text(index.toString()),
+                    )),
+
+                  ),
+                )
             ),
-            child: const Text("Avons nous un problème de lecture ?"),
-          ),
-          Expanded(child: Container(
-            // margin: EdgeInsets.fromLTRB(5, 0, 10, 0),
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.blue, Colors.lightGreen],
-                  begin: Alignment.topCenter
-              ),
+
+            Container(
+              color: Colors.white,
+              height: 54,
             ),
-            child: Wrap(
-              direction: Axis.horizontal,
-              // crossAxisAlignment: WrapCrossAlignment.end,
-              alignment: WrapAlignment.start,
-              children: [
-                Container(
-                  color: Colors.green,
-                  height: 54,
-                  width: 128,
-                ),
-                Container(
-                  color: Colors.redAccent,
-                  height: 54,
-                  width: 228,
-                ),
-                Container(
-                  color: Colors.orange,
-                  height: 54,
-                  width: 100,
-                ),
-                Container(
-                  color: Colors.black54,
-                  height: 54,
-                  width: 128,
-                ),
-                Container(
-                  color: Colors.pinkAccent,
-                  height: 54,
-                  width: 128,
-                ),
-                Container(
-                  color: Colors.white,
-                  height: 54,
-                  width: 56,
-                ),
-                Expanded(
-                  child: Container(
-                  color: Colors.lime,
-                  height: 54,
-                  // width: 56,
-                ),),
-              ],
+            Container(
+              color: Colors.orange,
+              height: 254,
             ),
-          ))
-        ],
+            Container(
+              color: Colors.lightGreen,
+              height: 454,
+            ),
+            Container(
+              color: Colors.red,
+              height: 128,
+            ),
+            Container(
+              color: Colors.brown,
+              height: 254,
+            ),
+            Container(
+              color: Colors.red,
+              height: 128,
+            ),
+          ],
+
+
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // children: [
+        //   Container(
+        //     alignment: Alignment.center,
+        //     height: 64,
+        //     // margin: const EdgeInsets.all(16),
+        //     decoration: BoxDecoration(
+        //         borderRadius: BorderRadius.circular(8),
+        //         color: Colors.lightGreenAccent
+        //     ),
+        //     child: const Text("Avons nous un problème de lecture ?"),
+        //   ),
+        //   Expanded(child: Container(
+        //     // margin: EdgeInsets.fromLTRB(5, 0, 10, 0),
+        //     decoration: const BoxDecoration(
+        //       gradient: LinearGradient(colors: [Colors.blue, Colors.lightGreen],
+        //           begin: Alignment.topCenter
+        //       ),
+        //     ),
+        //     child: Wrap(
+        //       direction: Axis.horizontal,
+        //       // crossAxisAlignment: WrapCrossAlignment.end,
+        //       alignment: WrapAlignment.start,
+        //       children: [
+        //         Container(
+        //           color: Colors.green,
+        //           height: 54,
+        //           width: 128,
+        //         ),
+        //         Container(
+        //           color: Colors.redAccent,
+        //           height: 54,
+        //           width: 228,
+        //         ),
+        //         Container(
+        //           color: Colors.orange,
+        //           height: 54,
+        //           width: 100,
+        //         ),
+        //         Container(
+        //           color: Colors.black54,
+        //           height: 54,
+        //           width: 128,
+        //         ),
+        //         Container(
+        //           color: Colors.pinkAccent,
+        //           height: 54,
+        //           width: 128,
+        //         ),
+        //         Container(
+        //           color: Colors.white,
+        //           height: 54,
+        //           width: 56,
+        //         ),
+        //         Expanded(
+        //           child: Container(
+        //           color: Colors.lime,
+        //           height: 54,
+        //           // width: 56,
+        //         ),),
+        //       ],
+        //     ),
+        //   ))
+        // ],
         // children: [
         //   Text("Salut les codeurs"),
         //   const Divider(
